@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<%@ page contentType="text/html; charset=utf-8" %>
+<%@ page import="java.sql.*,javax.sql.*,java.io.*" %>
+<%@ page errorPage="error_insert.jsp"%>
+
+<html>
+<!-- html 언어로 작성 시작 -->
+
+<head>
+    <!-- heading의 준말로 머리말에 해당 -->
+</head> <!-- 헤드 종료 -->
+
+<body>
+    <!-- 본문에 해당 시작 -->
+    <h1>테이블 값 넣기 OK</h1>
+    테이블 값 넣기를 여러번 실행해도 한번만 적용됩니다.
+    <% Class.forName("com.mysql.jdbc.Driver"); Connection
+        conn=DriverManager.getConnection("jdbc:mysql://192.168.23.98:33060/kopoctc", "root" , "qwer" ); Statement
+        stmt=conn.createStatement(); stmt.execute("delete from examtable10 where studentid> 0;");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('나연', 209901, 95, 100, 95);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('정연', 209902, 100, 100, 100);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('모모', 209903, 100, 90, 100);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('사나', 209904, 100, 95, 90);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('지효', 209905, 80, 100, 70);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('미나', 209906, 95, 90, 95);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('다현', 209907, 100, 90, 100);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('채영', 209908, 100, 75, 90);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('쯔위', 209909, 100, 100, 70);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('나연', 209910, 95, 100, 95);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('나연', 209911, 95, 100, 95);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('정연', 209912, 100, 100, 100);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('모모', 209913, 100, 90, 100);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('사나', 209914, 100, 95, 90);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('지효', 209915, 80, 100, 70);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('미나', 209916, 95, 90, 95);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('다현', 209917, 100, 90, 100);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('채영', 209918, 100, 75, 90);");
+        stmt.execute("insert into examtable10 (name, studentid, kor, eng, mat) values ('쯔위', 209919, 100, 100, 70);");
+        stmt.close(); // statement 종료
+        conn.close(); // connection 종료
+        %>
+
+</body> <!-- 본문 종료 -->
+
+</html> <!-- html 종료 -->
