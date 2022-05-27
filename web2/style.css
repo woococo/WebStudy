@@ -1,0 +1,17 @@
+.textCss1 {
+    color: green;
+    text-align: center;
+    text-decoration: overline;
+    text-transform: uppercase;
+    text-indent: 10%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.textCss2 {
+    color: yellow;
+    text-align: left;
+    text-decoration: underline;
+    text-transform: lowercase;
+    text-indent: 5%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
