@@ -4,7 +4,6 @@
     text-decoration: overline;
     text-transform: uppercase;
     text-indent: 10%;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .textCss2 {
@@ -13,5 +12,11 @@
     text-decoration: underline;
     text-transform: lowercase;
     text-indent: 5%;
+}
+
+.font {
     font-family: 'Noto Sans KR', sans-serif;
+    font-style: italic;
+    font-size: large;
+    font-weight: 100;
 }
