@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    html {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .menu {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .menu a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    @media screen and (max-width: 600px) {
+      .menu a {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    .content {
+      width: auto;
+    }
+
+    .img {
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .text {
+      position: absolute;
+      place-content: center;
+      top: 30%;
+      width: 100%;
+      color: white;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 200;
+    }
+
+    button {
+      position: absolute;
+      place-content: center;
+      top: 40%;
+      left: 40%;
+      width: 150px;
+      height: 50px;
+      color: white;
+      border-color: white;
+      vertical-align: middle;
+      background-color: transparent;
+    }
+    
+  </style>
+    <div class="menu">
+      <a href="#">★</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="content"><img class="img" src="pado.png" alt=""></div>
+    <div style="clear: both;"><h2 class="text">안녕하세요. 제 이름은 이지연입니다.<br>
+        저는 개발자가 되고 싶습니다.</h2></div>
+    <div><button class="button">view my work → </button></div>
+    
+
+</body>
+
+</html>
