@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    .mybutton {
+      width: 150px;
+      height: 50px;
+      background-color: gray;
+      color: white;
+      border: 1px black solid;
+    }
+
+    .clicked {
+      background-color: white;
+      color: black;
+    }
+  </style>
+  <button class="mybutton">html</button>
+  <button class="mybutton">css</button>
+  <button class="mybutton">javascript</button>
+  <script>
+    var mybutton = document.getElementsByClassName("mybutton");
+
+    function handleClick(event) {
+      console.log(event.target);
+      // console.log(this);
+      // 콘솔창을 보면 둘다 동일한 값이 나온다
+
+      console.log(event.target.classList);
+
+      if (event.target.classList[1] === "clicked") {
+        event.target.classList.remove("clicked");
+      } else {
+        for (var i = 0; i < mybutton.length; i++) {
+          mybutton[i].classList.remove("clicked");
+        }
+
+        event.target.classList.add("clicked");
+      }
+    }
+
+    function init() {
+      for (var i = 0; i < mybutton.length; i++) {
+        mybutton[i].addEventListener("click", handleClick);
+      }
+    }
+
+    init();
+  </script>
+</body>
+
+</html>
