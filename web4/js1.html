@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <script>
+        // 변수 var와 같지만 재선언 불가능
+        var i = 10;
+        let i = 20;
+        console.log(i);
+
+        // 상수
+        const NUM = 10;
+
+        // number
+        let num = 10;
+        // number = 'Hello'; 이렇게 사용하지 마세요, 타입이 중간에 바뀐다
+
+        // string
+        let text = 'Hello';
+        // text = 10;
+
+        // 문자열 병합
+        let name = '이지연';
+        let age = 25;
+        let result = name + '는' + age + '살입니다.'; // 극혐
+        result = `${name}는 ${age}살입니다.`;
+
+        // for문
+        let items = [1, 2, 3, 4];
+        for (let i = 0; i < items.length; i++) {
+            console.log(items[i]);
+        }
+        for (let item in items) {
+            console.log(item);
+        }
+
+        function myFunc(num) {
+            console.log(num);
+        }
+
+        // Object, JSON
+        let person = {
+            name: '이지연',
+            age: 25
+        };
+
+        console.log(person);
+
+    </script>
+    <button onclick="greeting()">인사</button>
+</body>
+
+</html>
