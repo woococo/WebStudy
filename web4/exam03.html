@@ -2,49 +2,65 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        function red() {
-            alert('빨강색으로 변경됩니다.');
-            let $target = document.getElementById('target');
-            $target.style.color = 'red'
-        }
-        function blue() {
-            alert('파랑색으로 변경됩니다.');
-            let $target = document.getElementById('target');
-            $target.style.color = 'blue'
-        }
-        function green() {
-            alert('초록색으로 변경됩니다.');
-            let $target = document.getElementById('target');
-            $target.style.color = 'green'
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
 </head>
 
 <body>
-    <style>
-        .mytext {
-            text-align: center;
-            font-size: xx-large;
-        }
-    </style>
-    <script>
-        // 텍스트 입력
-        let text = prompt('텍스트 값을 입력해 주세요.');
-        // 만약 텍스트가 입력되지 않았다면
-        if (text === '') {
-            text = prompt('텍스트 값을 입력해 주세요!!');
-        } else {
-            document.write("<div id='target' class='mytext'>" + text + "</div>");
-        }
-    </script>
-    <button onclick="red()">빨강</button>
+  <style>
+    .mytext {
+      font-size: 800%;
+      display: inline-block;
+      width: 100%;
+      height: 300px;
+      text-align: center;
+      line-height: 300px;
+      top: 100px;
+      left: 0px;
+    }
+    .mybutton {
+      display: inline-block;
+      margin-left: 40%;
+    }
+  </style>
+
+  <script>
+    // 텍스트 입력
+    let text = prompt('텍스트 값을 입력해 주세요.');
+    // 만약 텍스트가 입력되지 않았다면
+    if (text === '') {
+      text = prompt('텍스트 값을 입력해 주세요!!');
+    } else {
+      document.write("<div id='target' class='mytext'>" + text + "</div>");
+    }
+  </script>
+
+  <div>
+    <button onclick="red()" class="mybutton">빨강</button>
     <button onclick="blue()">파랑</button>
     <button onclick="green()">초록</button>
+  </div>
+
+  <script>
+    function red() {
+      alert('빨강색으로 변경됩니다.');
+      let $target = document.getElementById('target');
+      $target.style.color = 'red'
+    }
+    function blue() {
+      alert('파랑색으로 변경됩니다.');
+      let $target = document.getElementById('target');
+      $target.style.color = 'blue'
+    }
+    function green() {
+      alert('초록색으로 변경됩니다.');
+      let $target = document.getElementById('target');
+      $target.style.color = 'green'
+    }
+  </script>
 </body>
 
 </html>
