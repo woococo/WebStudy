@@ -29,6 +29,7 @@
       background-color: lightgray;
       border: 1px black solid;
     }
+
     .myButton2 {
       position: absolute;
       left: 180px;
@@ -37,15 +38,14 @@
       background-color: lightgray;
       border: 1px black solid;
     }
-
   </style>
   <form action="">
     <div class="container">
       <div class="menu">아이디</div>
-      <input type="email" required><br><br>
+      <input type="text"><br><br>
 
       <div class="menu">비밀번호</div>
-      <input type="password" minlength="5" required><br><br>
+      <input type="password" minlength="5"><br><br>
 
       <div class="menu">성별</div>
       <input type="radio" name="type">
@@ -72,14 +72,26 @@
 
       <div>
         <input type="reset" class="myButton1" value="취소">
-        <input type="button" class="myButton2" value="회원가입" id="my_button">
+        <input type="submit" class="myButton2" value="회원가입" id="my_button">
       </div>
     </div>
   </form>
 
   <script>
-    $('#my_button').click(function () {
-      if ($('input:radio[name=type]:checked').length < 1) {
+    function CheckEmail(str) {
+      const email_id = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if (!email_id.test(str)) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+    $('input:submit').click(function () {
+      if (CheckEmail($("input:text").val()) == false) {
+        alert("아이디는 이메일형식으로 입력해주세요.");
+      } else if ($("input:password").val().length < 5) {
+        alert("비밀번호는 5글자 이상으로 입력해주세요.");
+      } else if ($('input:radio[name=type]:checked').length < 1) {
         alert("성별을 선택해주세요.");
       } else if ($('select[name=job]').val().length < 1) {
         alert("직업을 선택해주세요.");
