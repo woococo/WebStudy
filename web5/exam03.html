@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <style>
+    .container {
+      width: 300px;
+    }
+
+    .menu {
+      display: inline-block;
+      width: 80px;
+    }
+
+    .myButton {}
+  </style>
+  <form action="">
+    <div class="container">
+      <div class="menu">아이디</div>
+      <input type="email" placeholder="아이디" required><br><br>
+
+      <div class="menu">비밀번호</div>
+      <input type="password" placeholder="비밀번호" minlength="5" required><br><br>
+
+      <div class="menu">성별</div>
+      <input type="radio" name="type">
+      <label>남자</label>
+      <input type="radio" name="type">
+      <label>여자</label><br><br>
+
+      <div class="menu">직업</div>
+      <select name="job">
+        <option value="" width="10"></option>
+        <option value="backEnd">백엔드</option>
+        <option value="FrontEnd">프론트엔드</option>
+        <option value="server">서버</option>
+      </select><br><br>
+
+      <div class="menu">취미</div>
+      <input type="checkbox" name="hobby">개발
+      <input type="checkbox" name="hobby">게임
+      <input type="checkbox" name="hobby">낚시 <br><br>
+      <div class="menu"></div>
+      <input type="checkbox" name="hobby">운동
+      <input type="checkbox" name="hobby">독서
+      <input type="checkbox" name="hobby">음악감상 <br><br>
+
+      <div class="myButton">
+        <input type="reset" value="취소">
+        <input type="button" value="회원가입" id="my_button">
+      </div>
+    </div>
+  </form>
+
+  <script>
+    $('#my_button').click(function () {
+      if ($('input:checkbox[name=hobby]:checked').length < 3) {
+        alert("취미는 3개 이상 선택해주세요.");
+      } else if ($('input:radio[name=type]:checked').length < 1) {
+        alert("성별을 선택해주세요.");
+      } else if ($('select[name=job]').val().length < 1) {
+        alert("직업을 선택해주세요.");
+      }
+      else {
+        alert("회원가입이 완료되었습니다.");
+      }
+
+    });
+
+  </script>
+</body>
+
+</html>
