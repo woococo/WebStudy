@@ -29,10 +29,6 @@
     var mybutton = document.getElementsByClassName("mybutton");
 
     function handleClick(event) {
-      console.log(event.target);
-      // console.log(this);
-      console.log(event.target.classList);
-
       for (var i = 0; i < mybutton.length; i++) {
         mybutton[i].classList.remove("clicked");
       }
