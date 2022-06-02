@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <style>
+    div {
+      display: inline-block;
+      border: 1;
+      width: 150px;
+      height: 70px;
+      text-align: center;
+      border: 1px solid black;
+      line-height: 70px;
+    }
+
+    .box {
+      background-color: grey;
+      color: white;
+    }
+
+    .selected-box {
+      background-color: white;
+      color: black;
+    }
+  </style>
+
+
+  <div class="box" onclick="changeStyle(this)">html</div>
+  <div class="box" onclick="changeStyle(this)">css</div>
+  <div class="box" onclick="changeStyle(this)">javascript</div>
+
+  <script>
+    function changeStyle($el) {
+      console.log($el);
+
+      $divs = $('div');
+
+      for (let i = 0; i < $divs.length; i++) {
+        // $divs[i].className = $divs[i] === $el ? 'selected-box' : 'box';
+        // if ($divs[i] === $el) {
+        //   $divs[i].className = 'selected-box';
+        // } else {
+        //   $divs[i].className = 'box';
+        // }
+        if ($divs[i] === $el) {
+          $('div').eq(i).attr('class', 'selected-box');
+        } else {
+          $('div').eq(i).attr('class', 'box');
+        }
+      }
+    }
+
+  </script>
+</body>
+
+</html>
