@@ -21,15 +21,31 @@
       width: 80px;
     }
 
-    .myButton {}
+    .myButton1 {
+      position: absolute;
+      left: 80px;
+      width: 80px;
+      height: 30px;
+      background-color: lightgray;
+      border: 1px black solid;
+    }
+    .myButton2 {
+      position: absolute;
+      left: 180px;
+      width: 80px;
+      height: 30px;
+      background-color: lightgray;
+      border: 1px black solid;
+    }
+
   </style>
   <form action="">
     <div class="container">
       <div class="menu">아이디</div>
-      <input type="email" placeholder="아이디" required><br><br>
+      <input type="email" required><br><br>
 
       <div class="menu">비밀번호</div>
-      <input type="password" placeholder="비밀번호" minlength="5" required><br><br>
+      <input type="password" minlength="5" required><br><br>
 
       <div class="menu">성별</div>
       <input type="radio" name="type">
@@ -54,23 +70,22 @@
       <input type="checkbox" name="hobby">독서
       <input type="checkbox" name="hobby">음악감상 <br><br>
 
-      <div class="myButton">
-        <input type="reset" value="취소">
-        <input type="button" value="회원가입" id="my_button">
+      <div>
+        <input type="reset" class="myButton1" value="취소">
+        <input type="button" class="myButton2" value="회원가입" id="my_button">
       </div>
     </div>
   </form>
 
   <script>
     $('#my_button').click(function () {
-      if ($('input:checkbox[name=hobby]:checked').length < 3) {
-        alert("취미는 3개 이상 선택해주세요.");
-      } else if ($('input:radio[name=type]:checked').length < 1) {
+      if ($('input:radio[name=type]:checked').length < 1) {
         alert("성별을 선택해주세요.");
       } else if ($('select[name=job]').val().length < 1) {
         alert("직업을 선택해주세요.");
-      }
-      else {
+      } else if ($('input:checkbox[name=hobby]:checked').length < 3) {
+        alert("취미는 3개 이상 선택해주세요.");
+      } else {
         alert("회원가입이 완료되었습니다.");
       }
 
