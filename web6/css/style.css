@@ -10,3 +10,9 @@
     left: -10px;
 }
 
+#goomba {
+    width: 50px;
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
