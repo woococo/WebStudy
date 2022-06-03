@@ -18,7 +18,15 @@
     <img id="mario" src="assets/mario.gif" alt="mario">
     <img id="goomba" src="assets/goomba.gif" alt="goomba">
     <img id="killer" src="assets/killer.gif" alt="killer">
-    <div id="score">점수 : 0</div>
+    <div id="score">score : 0</div>
+  </div>
+
+  <div>
+    시작 화면
+  </div>
+
+  <div>
+    게임 오버 화면
   </div>
 
   <script>
@@ -109,7 +117,7 @@
     }
 
     function setScore(score) {
-      $('#score').text(`점수 : ${score}`);
+      $('#score').text(`score : ${score}`);
     }
 
     function goombaInit() {
@@ -123,8 +131,8 @@
       }
 
       isJumping = true;
-      $('#mario').animate({ bottom: '+=200px' }, 'fast')
-        .animate({ bottom: '-=200px' }, 1000, function () {
+      $('#mario').animate({ bottom: '+=100px' }, 'fast')
+        .animate({ bottom: '-=100px' }, 500, function () {
           isJumping = false;
         });
     }
