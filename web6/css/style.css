@@ -2,17 +2,25 @@
     border: 1px black solid;
     height: 90vh;
     position: relative;
-}
-#mario {
+  }
+  
+  #mario {
+    width: 200px;
     position: absolute;
+    bottom: 10px;
+  }
+  
+  #goomba {
     width: 100px;
-    bottom: 5px;
-    left: -10px;
-}
-
-#goomba {
-    width: 50px;
     position: absolute;
-    bottom: 5px;
-    right: 20px;
-}
+    bottom: 10px;
+    right: 50px;
+  }
+
+  #killer {
+      position: absolute;
+      width: 150px;
+      left: 160px;
+      bottom: 30px;
+      /* transform: scaleX(-1); */
+  }
