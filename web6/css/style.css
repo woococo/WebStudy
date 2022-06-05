@@ -5,21 +5,52 @@ body {
     overflow-x: hidden;
 }
 
-#start {
-    position: absolute;
-
-}
-
-#gameover {
-    position: absolute;
-
-}
-
 .container {
     /* border: 1px black solid; */
     width: 1200px;
     height: 600px;
     position: relative;
+}
+
+.background {
+    position: absolute;
+    background-image: url('../assets/bg.png');
+    width: 200%;
+    height: 100%;
+    animation: slide 4s linear infinite;
+}
+
+button{
+    width: 400px;
+    border: 0;
+    background-color:transparent;
+    font-family: 'SuperMario3', serif;
+    font-size: 40px;
+    color: navy;
+    text-shadow: 2px 3px 5px white;
+    
+}
+
+#start {
+    position: relative;
+    top: 100px;
+    padding: 2%;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'SuperMario2', serif;
+    color: white;
+    text-shadow: 5px 10px 10px navy;
+}
+
+#gameover {
+    position: relative;
+    top: 100px;
+    padding: 2%;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'SuperMario2', serif;
+    color: white;
+    text-shadow: 5px 10px 10px navy;
 }
 
 #mario {
@@ -47,20 +78,16 @@ body {
 
 #score {
     position: relative;
+    top: 50px;
     padding: 2%;
-    font-size: 30px;
+    text-align: center;
+    font-size: 40px;
     font-family: 'SuperMario1', serif;
     color: white;
 }
 
 
-.background {
-    position: absolute;
-    background-image: url('../assets/bg.png');
-    width: 200%;
-    height: 100%;
-    animation: slide 4s linear infinite;
-}
+
 
 @font-face {
     font-family: "SuperMario1";
