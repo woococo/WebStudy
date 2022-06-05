@@ -15,25 +15,41 @@
 <body>
   <div class="container">
     <div class="background"></div>
-    <img id="mario" src="assets/mario.gif" alt="mario">
-    <img id="goomba" src="assets/goomba.gif" alt="goomba">
-    <img id="killer" src="assets/killer.gif" alt="killer">
-    <div id="score">score : 0</div>
-  </div>
+    <div id="ingame">
+      <img id="mario" src="assets/mario.gif" alt="mario">
+      <img id="goomba" src="assets/goomba.gif" alt="goomba">
+      <img id="killer" src="assets/killer.gif" alt="killer">
+      <div id="score">score : 0</div>
+    </div>
 
-  <div>
-    시작 화면
-  </div>
+    <div id="start">
+      SUPER MARIO <br>
+      <button class="enter_game">GAME START</button>
+    </div>
 
-  <div>
-    게임 오버 화면
+    <div id="gameover">
+      GAME OVER <br>
+      <button class="try_again">home</button>
+    </div>
   </div>
 
   <script>
     let isJumping = false;
     let isGameOver = false;
+    let isGameStart = true;
     let score = 0;
     let isKillerStart = false;
+
+    function showStart(isGameStart) {
+      if (isGameStart == true) {
+        $('#start').show();
+        $('#ingame').hide();
+        $('#gameover').hide();
+      } else {
+        $('#start').hide();
+        $('#ingame').show();
+      }
+    }
 
     function goombaDown() {
       let goombaLeft = Number($('#goomba').css('left').replace('px', ''));
@@ -63,14 +79,17 @@
       }
 
       let marioRight = 250;
-
       let goombaLeft = Number($('#goomba').css('left').replace('px', ''));
 
       if (goombaLeft <= marioRight && isJumping == false) {
         console.log('die');
-        // alert('Game Over');
         $('#goomba').stop();
         isGameOver = true;
+
+        $('#ingame').hide();
+        $('#gameover').show();
+
+        isGameStart = false;
       }
     }
 
@@ -131,8 +150,8 @@
       }
 
       isJumping = true;
-      $('#mario').animate({ bottom: '+=100px' }, 'fast')
-        .animate({ bottom: '-=100px' }, 500, function () {
+      $('#mario').animate({ bottom: '+=200px' }, 'fast')
+        .animate({ bottom: '-=200px' }, 1000, function () {
           isJumping = false;
         });
     }
@@ -150,12 +169,25 @@
         }
       });
 
-      // 굼바 출발
-      goombaStart();
+      showStart(isGameStart);
+
+      if ($('.enter_game').click(function () {
+        $('#start').hide();
+        $('#ingame').show();
+
+        // 굼바 출발
+        goombaStart();
+      }))
+
+        // 굼바 죽었나 체크
+        setInterval(goombaDown, 10);
+
       // 충돌 체크
       setInterval(marioDown, 10);
-      // 굼바 죽었나 체크
-      setInterval(goombaDown, 10);
+
+      if ($('.try_again').click(function () {
+        location.reload();
+      }));
     });
   </script>
 </body>
