@@ -15,22 +15,23 @@
 <body>
   <div class="container">
     <div class="background"></div>
-    <img id="mario" src="assets/mario.gif" alt="mario">
-    <img id="goomba" src="assets/goomba.gif" alt="goomba">
-    <img id="killer" src="assets/killer.gif" alt="killer">
-    <div id="score">score : 0</div>
-  </div>
+    <div id="ingame">
+      <img id="mario" src="assets/mario.gif" alt="mario">
+      <img id="goomba" src="assets/goomba.gif" alt="goomba">
+      <img id="killer" src="assets/killer.gif" alt="killer">
+      <div id="score">score : 0</div>
+    </div>
 
-  <div id="start">
-    GAME START
-    <button class="enter_game">start</button>
-  </div>
+    <div id="start">
+      SUPER MARIO <br>
+      <button class="enter_game">GAME START</button>
+    </div>
 
-  <div id="gameover">
-    GAME OVER
-    <button class="try_again">home</button>
+    <div id="gameover">
+      GAME OVER <br>
+      <button class="try_again">home</button>
+    </div>
   </div>
-
 
   <script>
     let isJumping = false;
@@ -42,11 +43,11 @@
     function showStart(isGameStart) {
       if (isGameStart == true) {
         $('#start').show();
-        $('.container').hide();
+        $('#ingame').hide();
         $('#gameover').hide();
       } else {
         $('#start').hide();
-        $('.container').show();
+        $('#ingame').show();
       }
     }
 
@@ -85,7 +86,7 @@
         $('#goomba').stop();
         isGameOver = true;
 
-        $('.container').hide();
+        $('#ingame').hide();
         $('#gameover').show();
 
         isGameStart = false;
@@ -172,7 +173,7 @@
 
       if ($('.enter_game').click(function () {
         $('#start').hide();
-        $('.container').show();
+        $('#ingame').show();
 
         // 굼바 출발
         goombaStart();
