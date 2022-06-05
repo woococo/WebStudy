@@ -53,6 +53,10 @@ button{
     text-shadow: 5px 10px 10px navy;
 }
 
+#gameoverImg {
+    width: 200px;
+}
+
 #mario {
     width: 100px;
     position: absolute;
