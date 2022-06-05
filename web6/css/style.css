@@ -1,29 +1,91 @@
-.container {
-    border: 1px black solid;
-    height: 90vh;
-    position: relative;
-    background-image : url('../assets/background.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-  
-  #mario {
-    width: 200px;
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+#start {
     position: absolute;
-    bottom: 200px;
-  }
-  
-  #goomba {
+
+}
+
+#gameover {
+    position: absolute;
+
+}
+
+.container {
+    /* border: 1px black solid; */
+    width: 1200px;
+    height: 600px;
+    position: relative;
+}
+
+#mario {
     width: 100px;
     position: absolute;
-    bottom: 200px;
-    right: 50px;
-  }
+    bottom: 90px;
+    left: 50px;
+}
 
-  #killer {
-      position: absolute;
-      width: 150px;
-      left: 160px;
-      bottom: 210px;
-      /* transform: scaleX(-1); */
-  }
+#goomba {
+    width: 50px;
+    position: absolute;
+    bottom: 90px;
+    right: 50px;
+}
+
+#killer {
+    position: absolute;
+    width: 60px;
+    left: 220px;
+    bottom: 100px;
+    /* transform: scaleX(-1); */
+    display: none;
+}
+
+#score {
+    position: relative;
+    padding: 2%;
+    font-size: 30px;
+    font-family: 'SuperMario1', serif;
+    color: white;
+}
+
+
+.background {
+    position: absolute;
+    background-image: url('../assets/bg.png');
+    width: 200%;
+    height: 100%;
+    animation: slide 4s linear infinite;
+}
+
+@font-face {
+    font-family: "SuperMario1";
+    src: url("../font/SuperMario1.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SuperMario2";
+    src: url("../font/SuperMario2.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SuperMario3";
+    src: url("../font/SuperMario3.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@keyframes slide {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: -80%;
+    }
+}
