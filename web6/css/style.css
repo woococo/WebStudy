@@ -28,6 +28,7 @@ button{
     font-size: 40px;
     color: navy;
     text-shadow: 2px 3px 5px white;
+    animation: blink-effect 0.8s step-end infinite;
     
 }
 
@@ -120,3 +121,9 @@ button{
         left: -80%;
     }
 }
+
+@keyframes blink-effect {
+    50% {
+      opacity: 0;
+    }
+  }
