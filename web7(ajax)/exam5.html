@@ -45,10 +45,10 @@
 <body onload="loadData()">
   <script>
     let movieData = [];
-    function moveCommentsPage(postId) {
-      console.log(postId);
+    function moveCommentsPage(movie) {
+      console.log(movie);
       // 페이지 이동
-      document.location.href = `exam6.html?id=${postId}`;
+      document.location.href = `exam6.html?movieI=${movie}`;
     }
 
     function loadData() {
