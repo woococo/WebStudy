@@ -12,3 +12,7 @@
 # movie list
 
 - url : https://woococo.github.io/web/web7(ajax)/exam5.html
+
+![image](https://user-images.githubusercontent.com/101681351/172504172-7263ecaa-e728-491e-a831-cb01d9a43455.png)
+![image](https://user-images.githubusercontent.com/101681351/172504190-9c911619-4264-4482-9087-1c72f07210c7.png)
+
