@@ -11,4 +11,4 @@
 
 # movie list
 
-- url : https://woococo.github.io/web/web7(ajax)/exam5
+- url : https://woococo.github.io/web/web7(ajax)/exam5.html
